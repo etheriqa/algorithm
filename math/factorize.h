@@ -3,10 +3,11 @@
 #include <cmath>
 #include <map>
 
-std::map<std::uint_least64_t, std::uint_least8_t>
-factorize(std::uint_least64_t n) {
-  std::map<std::uint_least64_t, std::uint_least8_t> factor;
-  for (std::uint_least64_t i = 2; n > 1 && i <= std::floor(std::sqrt(n)); i++) {
+template <typename Integral, typename Container = std::map<Integral, Integral>>
+Container
+factorize(Integral n) {
+  Container factor;
+  for (Integral i = 2; i <= std::sqrt(n); i++) {
     while (n % i == 0) {
       n /= i;
       factor[i]++;
