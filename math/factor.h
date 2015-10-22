@@ -5,16 +5,16 @@
 
 template <typename Integral, typename Container = std::map<Integral, Integral>>
 Container
-factorize(Integral n) {
-  Container factor;
+factor(Integral n) {
+  Container factors;
   for (Integral i = 2; i <= std::sqrt(n); i++) {
     while (n % i == 0) {
       n /= i;
-      factor[i]++;
+      factors[i]++;
     }
   }
   if (n > 1) {
-    factor[n]++;
+    factors[n]++;
   }
-  return factor;
+  return factors;
 }

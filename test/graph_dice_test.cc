@@ -1,5 +1,6 @@
-#include "graph/dice.h"
 #include "gtest/gtest.h"
+
+#include "graph/dice.h"
 
 TEST(Graph, Dice) {
   const Dice dice;
