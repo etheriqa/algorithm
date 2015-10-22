@@ -9,7 +9,7 @@ OBJECTS = $(SOURCES:.cc=.o)
 
 CPPFLAGS = -MMD -MP -I. -I$(GTEST_DIR) -I$(GTEST_DIR)/include
 CXXFLAGS = -Wall -std=c++11 -O2
-LDFLAGS = -lpthread
+LDLIBS = -lpthread
 
 .PHONY: test clean
 
