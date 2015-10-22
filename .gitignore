@@ -1,4 +1,4 @@
 *.d
 *.o
-/algorithm
+/test/all
 /vendor

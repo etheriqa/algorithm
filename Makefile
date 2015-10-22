@@ -1,4 +1,4 @@
-TARGET = ./algorithm
+TARGET = ./test/all
 
 TEST_DIR = ./test
 GTEST_DIR = ./vendor/googletest
@@ -7,7 +7,7 @@ SOURCES = $(shell find $(TEST_DIR) -name '*.cc')
 DEPENDS = $(SOURCES:.cc=.d)
 OBJECTS = $(SOURCES:.cc=.o)
 
-CPPFLAGS = -MMD -MP -I. -I$(GTEST_DIR)/include -I$(GTEST_DIR)
+CPPFLAGS = -MMD -MP -I. -I$(GTEST_DIR) -I$(GTEST_DIR)/include
 CXXFLAGS = -Wall -std=c++11 -O2
 LDFLAGS = -lpthread
 
